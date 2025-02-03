@@ -3,7 +3,8 @@ import { calcAge } from '../utils'
 
 export default function AgeCalc() {
   // Nějaké reaktivní proměnné? Možná věk? možná rok narození?
-  const [age, setAge]: [any, any] = useState(null)
+  const thisYear = new Date().getFullYear()
+  const [age, setAge]= useState<number | null>(thisYear)
   const [birthYear, setBirthYear] = useState(null)
 
   const handleChange = (e: any) => {
@@ -20,7 +21,7 @@ export default function AgeCalc() {
     <div>
       <label>
         Zadej rok narození:
-        <input type='number' value={birthYear ?? 0} onChange={handleChange} />
+        <input type='number' value={birthYear ?? thisYear} onChange={handleChange} />
       </label>
       {age !== null && <p>Tvůj věk je: {age}</p>}
     </div>
