@@ -4,7 +4,7 @@ import { calcAge } from '../utils'
 export default function AgeCalc() {
   // Nějaké reaktivní proměnné? Možná věk? možná rok narození?
   const thisYear = new Date().getFullYear()
-  const [age, setAge]: [any, any] = useState(thisYear)
+  const [age, setAge]= useState<number | null>(thisYe
   const [birthYear, setBirthYear] = useState(null)
 
   const handleChange = (e: any) => {
