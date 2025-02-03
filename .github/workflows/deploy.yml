@@ -33,7 +33,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Cesta, kde se po buildu vytvoří výsledný projekt 
+          # Cesta, kde se po buildu vytvoří výsledný projekt
           path: ./dist
   deploy:
     permissions:

@@ -8,13 +8,20 @@ import './App.css'
 function App() {
   return (
     <>
-      <Title text="hello world :3" />
+      <Title text='hello world :3' />
       <Counter />
       <Counter />
-      <br/>
+      <br />
       <ColorButton />
-      <UserCard user={{name: "karel", age:12, email: "bruh@email.com", isStudent: true}}/>
-      <UserCard user={{name: "karla", age:85, email: "amogus@email.com"}}/>
+      <UserCard
+        user={{
+          name: 'karel',
+          age: 12,
+          email: 'bruh@email.com',
+          isStudent: true,
+        }}
+      />
+      <UserCard user={{ name: 'karla', age: 85, email: 'amogus@email.com' }} />
       <AgeCalc />
     </>
   )
